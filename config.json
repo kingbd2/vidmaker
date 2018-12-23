@@ -1,0 +1,12 @@
+{
+    "Records": [
+        {
+            "keywords": "life",
+            "limit": 50,
+            "color": "green",
+            "size": "large",
+            "print_urls": true,
+            "format": "png"
+        }
+    ]
+}
