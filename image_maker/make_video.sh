@@ -7,7 +7,7 @@ ouput='universe.mp4'
 report='report.log'
 filebase='giffile_' 
 
-echo $'Converting to gif...'
+echo $'Converting to video...'
 ffmpeg -framerate "$framerate" \
     -pattern_type glob \
     -i "$input_extension" \

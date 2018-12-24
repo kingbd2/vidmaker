@@ -7,7 +7,6 @@ name = "pypi"
 
 [packages]
 
-ipykernel = "*"
 pandas = "*"
 numpy = "*"
 matplotlib = "*"
@@ -23,6 +22,8 @@ scikit-image = "*"
 opencv-contrib-python = "*"
 imageio = "*"
 scikit-video = "*"
+ffmpeg-python = "*"
+ipykernel = "*"
 
 
 [dev-packages]
