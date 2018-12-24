@@ -3,22 +3,23 @@ import numpy as np
 # import matplotlib.pyplot as plt
 from PIL import Image
 
-w, h = 512, 512
-# data = np.zeros((h, w, 3), dtype=np.uint8)
-# data[256, 256] = [255, 0, 0]
+import os
+import sys
+import errno
 
-for i in range(20):
-    data = np.random.uniform(0,1,(h, w))
-    # Convert array to image (png)
-    img = Image.fromarray(data, 'RGB')
-    img.save(str(str(i)+'image.png'))
+def main():
+    try:
+        w, h = 512, 512
+        data = np.zeros((h, w), dtype=np.uint8)
+        for i in range(255):
+            print("Saving image")
+            img = Image.fromarray(data, 'L')
+            img.save(str(str(i).zfill(4) + 'image.png'))
+            data += 1
+            sys.stdout.flush()
+    except IOError as e:
+        if e.errno == errno.EPIPE:
+            print("error")
 
-# Z = np.zeros(9)
-# Create random array
-# N = np.zeros(Z.shape, dtype=int)
-
-
-
-# Name image in sequential order
-
-# Convert images to video
+if __name__ == '__main__':
+    main()
